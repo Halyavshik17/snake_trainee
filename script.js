@@ -2,6 +2,8 @@
 // need update 
 // pause = shift, score = speed snake, more food on map, menu start and gameover (delete alert())
 
+// button game-start
+
 const playBoard = document.querySelector(".play-board");
 const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
