@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+element {
+    --color: rgb(0, 237, 100);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e3f2fc;   
+}
+
+.wrapper {
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    background: #294447;
+    border-radius: 5px;
+    box-shadow: 0 20px 40px rgba(52, 87, 228, 0.2);
+}
+
+.game-details {
+    color: #b8c6dc;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-board {
+    height: 100%;
+    width: 100%;
+    /* display: grid; */
+    background: #212837;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.play-board .food {
+    background: #ff083d;   
+}
+
+.play-board .head {
+    background: #60cbff;
+    border: #ff083d;
+}
+
+.play-start {
+    display: flex;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+
+    background: #212837;
+}
+
+.play-gameover {
+    display: none;
+
+    color: #b8c6dc;
+}
+
+.controls {
+    display: none;
+    justify-content: space-between;
+}
+
+.controls i {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #b8c6dc;
+    width: calc(100% / 4);
+    cursor: pointer;
+    border-right: 1px solid #171b26;
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        width: 90vmin;
+        height: 115vmin;
+    }
+
+    .game-details {
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+
+    .controls {
+       display: flex; 
+    }
+
+    .controls i {
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+}
+
+.btn-style  {
+    display: block;
+
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    padding: 0.75rem 1.5rem;
+    transition: 0.5s;
+
+    border: 0px;
+    border-radius: 5px;
+
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    height: 10vmin;
+    width: 70vmin;
+    margin: 70px;
+  }
+  
+  .btn-style :hover {
+    letter-spacing: 0.25rem;
+    color: #fff;
+    box-shadow: 0 0 50px 10px var(--color);
+
+    border-radius: 5px;
+  }
+  
+  .btn-style  ::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+  }
+  
+  .btn-style .btn-fade {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btn-style  i {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  
+  .btn-style  i::before {
+    content: "";
+    position: absolute;
+    top: -3.5px;
+    left: 80%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--color);
+    background: #27282c;
+    transform: translateX(-50%);
+    transition: 0.5s;
+  }
+  
+  .btn-style:hover i::before {
+    left: 20%;
+    width: 20px;
+  }
+  
